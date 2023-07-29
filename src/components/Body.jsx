@@ -1,7 +1,6 @@
 import React, { useReducer } from "react";
 import Form from "./Form";
 import EmployeeList from "./EmployeeList";
-import employeeData from "../assets/initial_data";
 
 const Body = () => {
   return (

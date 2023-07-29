@@ -49,8 +49,9 @@ const employeeSlice = createSlice({
       );
       if (payload == "") {
         state.departmentFilterData = [];
+      } else {
+        state.departmentFilterData = departmentFilterList;
       }
-      state.departmentFilterData = departmentFilterList;
       state.salaryFilterApplied = false;
       console.log(departmentFilterList);
     },
@@ -80,6 +81,8 @@ const employeeSlice = createSlice({
   },
 });
 
+console.log(employeeSlice.actions);
+
 export const {
   addEmployee,
   editEmployee,
@@ -89,9 +92,4 @@ export const {
   onSalaryFilter,
   ofSalaryFilter,
 } = employeeSlice.actions;
-// export const getAllMovies = (state) => state.employeeSlice.movies;
-// export const getAllSeries = (state) => state.employeeSlice.series;
-// export const getSelectedMovieOrShow = (state) =>
-//   state.employeeSlice.movieOrSeriesDetail;
-// export const getDetailLoading = (state) => state.employeeSlice.detailsLoading;
 export default employeeSlice.reducer;
